@@ -6,6 +6,9 @@ import math
 
 import numpy as np
 
+def get_quant_cells(question):
+    return [i for i in range(len(question.split(" ")))]
+
 def tokenize_and_separate_quants(data, n_min_vocab):
     pattern = re.compile('\d+,\d+|\d*\.\d+|\d+')
     constant_counts = Counter()
@@ -137,9 +140,10 @@ def convert_word_to_bytepair_tokenization(d, t5_tokenizer):
     d['nP_positions'] = [d_pos_to_t_pos[nP_pos][0] for nP_pos in d['nP_positions']]
     d['in_tokens'] = t_tokens
 
-def setup(use_t5, path='data/train.json', n_min_vocab=5, seed=0, test_split=0.2):
-    with open(path, 'r') as f:
-        data = json.load(f)
+def setup(use_t5, path='data/train.json', n_min_vocab=5, seed=0, test_split=0.2, data=None):
+    if data is None:
+        with open(path, 'r') as f:
+            data = json.load(f)
     constants, n_max_nP = tokenize_and_separate_quants(data, n_min_vocab)
 
     np.random.seed(seed)
