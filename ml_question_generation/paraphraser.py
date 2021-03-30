@@ -26,11 +26,11 @@ def paraphrase(sentence, num_similar=10):
     beam_outputs = model.generate(
         input_ids=input_ids, attention_mask=attention_masks,
         do_sample=True,
-        max_length=512,
+        max_length=1024,
         top_k=120,
-        top_p=0.99,
+        top_p=1,
         early_stopping=True,
-        num_return_sequences=10
+        num_return_sequences=15
     )
 
 
@@ -50,5 +50,5 @@ def paraphrase(sentence, num_similar=10):
 
 # print(paraphrase("If f(theta) is 3 times theta plus 19 squared and theta is 1 what is f(theta)?"))
 # print(paraphrase("If f(theta) is {c1} times theta plus {c2} squared and theta is {theta} what is f(theta)?"))
-# print(paraphrase("How does a classifier with decision boundary theta classify a point p if theta is [0, 2] and p is [1, -4]?"))
+# print(paraphrase("Complete the function below to return a 2 x 2 numpy array containing any values you wish."))
 # ['How do a classifier with decision boundary theta classify a point p because theta is [0, 2] and p is [1, -4]?', 'How does a classifier with decision boundary theta classify a point p? If theta is [0, 2]', 'What is the method by which a classifier with decision boundary theta classify a point if theta is [0, 2] and p is [1, -4]?', 'How does a classifier with decision boundary theta classify a point p if theta is [0, 2] and p is [1, 4]?', 'What happens if decision boundary theta classifies a point p if theta is [0, 2] and p is [1, -4]?', 'How does the decision boundary decision theta classify a point p, if theta is [0, 2] and p is [1, -4]?', 'How does a Classifier with decision boundary Theta classify the mark p if theta is [0, 2] and p is [1, -4]?']
