@@ -22,11 +22,11 @@ def return_data(train_id, test_id, use_paraphraser=False):
                 ans = get_rnn_answer(s0, w, x)
                 expression = get_rnn_expression(s0, w, x)
                 len_x = len(x)
-                questions = ["Consider a very simple RNN, defined by the following equation: s_t = w*s_t-1 + x_t. Given s_0 = {s0}, w = {w}, and x = {x}, what is s_{len_x}?",
-                          "An RNN is defined as s_t = w*s_t-1 + x_t. If s_0 is {s0}, w is {w}, and x is {x}, what is s_{len_x}?",
-                          "What is the RNN result s_{len_x} if s_0 is {s0}, w is {w}, and x is {x} if we let s_t = w*s_t-1 + x_t?",
-                          "We define an RNN as s_t = w*s_t-1 + x_t. What is s_{len_x} if s_0 is {s0}, w is {w}, and x is {x}?",
-                          "Let s_0 be {s0}, w be {w}, and x be {x}. Compute s_{len_x} if s_t is w*s_t-1 + x_t."]
+                questions = ["Consider a very simple RNN , defined by the following equation: s_t = w * s_ t-1 + x_t. Given s_0 = {s0} , w = {w} , and x = {x} , what is s_{len_x} ?",
+                          "An RNN is defined as s_t = w * s_t-1 + x_t. If s_0 is {s0} , w is {w} , and x is {x} , what is s_{len_x} ?",
+                          "What is the RNN result s_{len_x} if s_0 is {s0} , w is {w} , and x is {x} if we let s_t = w * s_t-1 + x_t ?",
+                          "We define an RNN as s_t = w * s_t-1 + x_t . What is s_{len_x} if s_0 is {s0} , w is {w} , and x is {x} ?",
+                          "Let s_0 be {s0} , w be {w} , and x be {x} . Compute s_{len_x} if s_t is w * s_t-1 + x_t ."]
                 for question in questions:
                     question = question.format(len_x = len_x, s0 = s0, w = w, x = format_list(x))
 

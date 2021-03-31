@@ -20,11 +20,11 @@ def return_data(train_id, test_id, use_paraphraser=False):
                 #make sure there are no spaces in the formula
                 formula = "{q}+({a}*({t}-{q}))"
                 formula = formula.format(q = q, a = a, t = t)
-                questions = ["What is the updated Q value of a tuple (s, a) if q is {q}, the a is {a}, and t is {t}?",
-                             "If q is {q}, what is its updated value after applying Q learning if a is {a} and t is {t}?",
-                             "Let q = {q}. After Q learning, what is q if a is {a} and t is {t}?",
-                             "If a is {a} and t is {t}, what is the Q learning value after applying one tuple (s, a) if q is {q}?",
-                             "After applying Q learning to q = {q}, what is its value? Let the t be {t} and a be {a}."]
+                questions = ["What is the updated Q value of a tuple ( s a ) if q is {q} , the a is {a} , and t is {t} ?",
+                             "If q is {q} , what is its updated value after applying Q learning if a is {a} and t is {t} ?",
+                             "Let q = {q} . After Q learning, what is q if a is {a} and t is {t} ?",
+                             "If a is {a} and t is {t} , what is the Q learning value after applying one tuple ( s a ) if q is {q} ?",
+                             "After applying Q learning to q = {q} , what is its value ? Let the t be {t} and a be {a} ."]
                 for question in questions:
                     question = question.format(q = q, a = a, t = t)
 

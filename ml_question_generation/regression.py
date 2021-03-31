@@ -20,11 +20,11 @@ def return_data(train_id, test_id, use_paraphraser=False):
                 #make sure there are no spaces in the formula
                 formula = "({c1}*{theta}+{c2})*({c1}*{theta}+{c2})"
                 formula = formula.format(c1 = format_exp(c1), c2 = format_exp(c2), theta = format_exp(theta))
-                questions = ["If f(theta) is {c1} times theta plus {c2} squared and theta is {theta} what is f(theta)?",
-                             "f(theta) is defined as {c1} times theta plus {c2} squared and theta is {theta}. What is f(theta)?",
-                             "f(theta) is the square of the sum of {c2} and the product of {c1} and {theta}, where theta is {theta}. What is f(theta)?",
-                             "What is f(theta) if f(theta) is theta times {c1} plus {c2} squared and theta is {theta}?",
-                             "If f(theta) is {c1} times theta plus {c2} squared, what is f(theta) when theta is {theta}?"]
+                questions = ["If f(theta) is {c1} times theta plus {c2} squared and theta is {theta} what is f(theta) ?",
+                             "f(theta) is defined as {c1} times theta plus {c2} squared and theta is {theta} . What is f(theta) ?",
+                             "f(theta) is the square of the sum of {c2} and the product of {c1} and theta , where theta is {theta} . What is f(theta) ?",
+                             "What is f(theta) if f(theta) is theta times {c1} plus {c2} squared and theta is {theta} ?",
+                             "If f(theta) is {c1} times theta plus {c2} squared , what is f(theta) when theta is {theta} ?"]
                 for question in questions:
                     question = question.format(c1 = format_num(c1), c2 = format_num(c2), theta = format_num(theta))
 

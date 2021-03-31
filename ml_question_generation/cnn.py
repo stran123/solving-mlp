@@ -20,11 +20,11 @@ def return_data(train_id, test_id, use_paraphraser=False):
             #make sure there are no spaces in the formula
             formula = "{len_I}-{len_F}+1"
             formula = formula.format(len_I = len(i), len_F = len(f))
-            questions = ["I has length {len_I} and F has length {len_F}, what is the length of the result of applying F to I?",
-                         "I is length {len_I} and F is length {len_F}. What is the length of the result from applying F to I?",
-                         "If F has length {len_F} and I has length {len_I}, what is the length of the result from applying F to I?",
+            questions = ["An image I has length {len_I} and filter F has length {len_F} , what is the length of the result of applying F to I ?",
+                         "Given a 1D image I that is length {len_I} and a filter F that is length {len_F} , what is the length of the result from applying F to I ?",
+                         "If filter F has length {len_F} and an image I has length {len_I} , what is the length of the result from applying F to I ?",
                          "What is the length of the result from applying F to I if F has length {len_F} and I has length {len_I}?",
-                         "If I is length {len_I} and F is length {len_F}, compute the length of the output from applying F to I?"]
+                         "If an image has length {len_I} and filter has length {len_F} , compute the length of the output from applying the filter to the image ?"]
             for question in questions:
                 question = question.format(I = format_list(i), F = format_list(f), len_I = len(i), len_F = len(f))
 

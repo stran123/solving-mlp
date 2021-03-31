@@ -20,11 +20,11 @@ def return_data(train_id, test_id, use_paraphraser=False):
                     #make sure there are no spaces in the formula
                     formula = "{theta}*({point}-{theta0})*{label}"
                     formula = formula.format(theta0 = format_exp(theta0), theta = format_exp(theta), point = format_exp(point), label = format_exp(label))
-                    questions = ["What is the margin of a classifier with theta being {theta} and theta_0 being {theta0} on a point {point} with label {label}?",
-                                 "If a point {point} with label {label} was classified by a classifier with theta {theta} and theta_0 {theta0}, what is the margin of this point?",
-                                 "What is the margin on a point {point} with a label {label} if it is classified by a classifier with theta {theta} and theta_0 {theta0}?",
-                                 "What is the size of the margin of a point {point} by a classifier with theta {theta} and theta_0 {theta0} if the point has label {label}?",
-                                 "A point {point} has label {label}. Compute the margin of a classifier on this point. Let the theta of the classifier be {theta} and the theta_0 of the classifier be {theta0}."]
+                    questions = ["What is the margin of a classifier with theta being {theta} and theta_0 being {theta0} on a point {point} with label {label} ?",
+                                 "If a point {point} with label {label} was classified by a classifier with theta {theta} and theta_0 {theta0} , what is the margin of this point ?",
+                                 "What is the margin on a point {point} with a label {label} if it is classified by a classifier with theta {theta} and theta_0 {theta0} ?",
+                                 "What is the size of the margin of a point {point} by a classifier with theta {theta} and theta_0 {theta0} if the point has label {label} ?",
+                                 "A point {point} has label {label} . Compute the margin of a classifier on this point . Let the theta of the classifier be {theta} and the theta_0 of the classifier be {theta0} ."]
                     for question in questions:
                         question = question.format(theta0 = format_num(theta0), theta = format_num(theta), point = format_num(point), label = format_num(label))
                         

@@ -23,11 +23,11 @@ def return_data(train_id, test_id, use_paraphraser=False):
                 formula = "(({x_a}*{theta_a})+({x_b}*{theta_b}))+{theta_0}"
                 formula = formula.format(x_a = format_exp(x_a), x_b = format_exp(x_b), theta_a = format_exp(theta_a), theta_b = format_exp(theta_b), theta_0 = format_exp(theta_0))
 
-                questions = ["x is ({x_a}, {x_b}), theta is ({theta_a}, {theta_b}) and theta_0 is {theta_0}. What is the value of theta times x plus theta_0?",
-                             "What is the value of theta times x plus theta_0 if x is ({x_a}, {x_b}), theta is ({theta_a}, {theta_b}), and theta_0 is {theta_0}?",
-                             "Let theta be ({theta_a}, {theta_b}), theta_0 be {theta_0}, and x be ({x_a}, {x_b}). Compute theta times x plus theta_0.",
-                             "What is the result of theta times x plus theta_0 if x is ({x_a}, {x_b}), theta is ({theta_a}, {theta_b}), and theta_0 is {theta_0}?",
-                             "If we have x equals ({x_a}, {x_b}), theta equals ({theta_a}, {theta_b}), and theta_0 equals {theta_0}, then what is the result of theta times x plus theta_0?"]
+                questions = ["x is ( {x_a} {x_b} ) , theta is ( {theta_a} {theta_b} ) and theta_0 is {theta_0} . What is the value of theta times x plus theta_0?",
+                             "What is the value of theta times x plus theta_0 if x is ( {x_a} {x_b} ), theta is ( {theta_a} {theta_b} ) , and theta_0 is {theta_0} ?",
+                             "Let theta be ( {theta_a} {theta_b} ) , theta_0 be {theta_0}, and x be ( {x_a} , {x_b} ) . Compute theta times x plus theta_0 .",
+                             "What is the result of theta times x plus theta_0 if x is ( {x_a} {x_b} ), theta is ( {theta_a} {theta_b} ) , and theta_0 is {theta_0} ?",
+                             "If we have x equals ( {x_a} {x_b} ), theta equals ( {theta_a} {theta_b} ), and theta_0 equals {theta_0} , then what is the result of theta times x plus theta_0 ?"]
                 for question in questions:
                     question = question.format(x_a = format_num(x_a), x_b = format_num(x_b), theta_a = format_num(theta_a), theta_b = format_num(theta_b), theta_0 = format_num(theta_0))
 

@@ -15,7 +15,7 @@ def format_exp(x):
 def format_list(lst):
     string = "[ "
     string += " ".join(map(lambda x: "negative " + str(-1*x) if x<0  else str(x), lst))
-    string += " ] "
+    string += " ]"
     return string
 
 def get_rnn_answer(s0, w, x):

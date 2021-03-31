@@ -1,4 +1,5 @@
 import json
+from tqdm import tqdm
 import random
 import basics as b # week 1
 import perceptrons as p # week 2
@@ -19,7 +20,7 @@ import dt_nn as dtnn # week 12
 
 false = False
 true = True
-use_paraphraser = True
+use_paraphraser = False
 
 # modules = [b, p, p2, f, lg, r, r2, nn_i, nn_ii, cnn, cnn2, rnn, sm_mdp, rl, dtnn, c]
 modules = [b, p, f, lr, r, nn_i, nn_ii, cnn, rnn, sm_mdp, rl, dtnn]
@@ -53,7 +54,7 @@ def generate_data(destination):
     test_data = []
     test_answers = []
     progress = 0
-    for mod in modules:
+    for mod in tqdm(modules):
         progress += 1
         train_id, test_id, train_data, test_data, test_answers = get_and_update(mod, train_id, test_id, train_data, test_data, test_answers)
         print("Progress:", str(progress) + " / " + str(len(modules)))
@@ -64,11 +65,11 @@ def generate_data(destination):
 
 def generate_topic_label_dict():
     question_to_topic = dict()
-    for mod,name in zip(modules,names):
+    for mod,name in tqdm(zip(modules,names)):
         question_to_topic = get_question_to_topic_dict(mod, name, question_to_topic)
     print(question_to_topic)
 
-generate_data("train-paraphrased.json")
-# generate_topic_label_dict()
+generate_data("train-cleaned.json")
+generate_topic_label_dict()
 
 
