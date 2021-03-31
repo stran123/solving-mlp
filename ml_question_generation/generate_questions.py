@@ -63,13 +63,14 @@ def generate_data(destination):
     with open("../data/" + destination, 'w') as outfile:
         json.dump(train_data, outfile)
 
-def generate_topic_label_dict():
+def generate_topic_label_dict(destination):
     question_to_topic = dict()
     for mod,name in tqdm(zip(modules,names)):
         question_to_topic = get_question_to_topic_dict(mod, name, question_to_topic)
-    print(question_to_topic)
+    with open("../data/" + destination, 'w') as outfile:
+        json.dump(question_to_topic, outfile)
 
 generate_data("train-cleaned.json")
-generate_topic_label_dict()
+generate_topic_label_dict("question-to-topic-cleaned.json")
 
 
