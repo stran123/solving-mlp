@@ -8,8 +8,9 @@ Question: A neural network has input x1 with weight w1 that goes into neuron A. 
           if x1 is {x1}, w1 is {w1}, oA is {oA}, wOA is {wOA}, wAC is {wAC}, oC is {oC}, and wOC is {wOC}?
 Expression: wAC*((x1*w1)+(oA*wOA))+(oC*wOC)
 
-Returns a train_data, test_data, and test_answers
-Each is a list that contains dictionaries in the associated formats"""
+Question: In a fully-connected feedforward network , how many weights ( including biases ) are there for one layer with {x} inputs and {y} outputs?
+Expression: 2*{x}*{y}
+"""
 def return_data(train_id, test_id, use_paraphraser=False):
     count = 0
     train_data = []
@@ -49,5 +50,37 @@ def return_data(train_id, test_id, use_paraphraser=False):
                                     train_data.append(train_dict)
                                     train_id += 1
                                     count += 1
+    for x in range(1, 26):
+        x = 10 * x
+        for y in range(1, 21):
+            y = 10 * y
+            # for y1 in range(-2, 3):
+            #     for y2 in range(-2, 3):
+            answer = eval(f"2*{x}*{y}")
+            #make sure there are no spaces in the formula
+            formula = "2*{x}*{y}".format(x = format_exp(x), y = format_exp(y))
+            questions = ["In a fully-connected feedforward network , how many weights ( including biases ) are there for one layer with {x} inputs and {y} outputs ?",
+                         "In a neural network where it is fully-connected and feedforward , how many total weights are there if we include the biases ? We have {x} inputs and {y} outputs .",
+                         "A fully-connected neural network has {y} outputs and {x} inputs . How many total weights are there including the biases ?",
+                         "Given a feedforward neural network layer , compute the total number of weights including biases if we have {y} outputs and {x} inputs .",
+                         "If we have a neural network layer with {x} inputs and {y} outputs , how many weights ( including biases ) are needed to describe each connection ?"]
+            for question in questions:
+                question = question.format(x = format_num(x), y = format_num(y))
+                if use_paraphraser:
+                    paraphrased_questions = paraphraser.paraphrase(question) # up to 10 
+                    for paraphrased_question in paraphrased_questions:
+                        quant_cell_positions = get_quant_cells(paraphrased_question)
+                        train_dict = {"expression": formula, "quant_cell_positions": quant_cell_positions, "processed_question": paraphrased_question, "raw_question": paraphrased_question, "is_quadratic": False, "Id": train_id, "Expected": answer}
+                        train_data.append(train_dict)
+                        train_id += 1
+                        count += 1
+                        
+                quant_cell_positions = get_quant_cells(question)
+                train_dict = {"expression": formula, "quant_cell_positions": quant_cell_positions, "processed_question": question, "raw_question": question, "is_quadratic": False, "Id": train_id, "Expected": answer}
+                train_data.append(train_dict)
+                train_id += 1
+                count += 1
     print("neuralnetwork_i.py: ", count)
     return train_data, test_data, test_answers
+
+return_data(0, 0)

@@ -10,13 +10,13 @@ Expression: 0m(wAC*((x1*w1)+(oA*wOA))+(oC*wOC))
 
 Returns a train_data, test_data, and test_answers
 Each is a list that contains dictionaries in the associated formats"""
-def return_data(train_id, test_id, use_paraphraser=False):
+def return_data(train_id, test_id, use_paraphraser=False, prev2node = 0):
     count = 0
     train_data = []
     test_data = []
     test_answers = []
     variables = {'x1': [0, -1, 2, -3, 4], 'w1': [1, 2], 'oA': [0.5], 'wOA': [0, 1, 2, 3, 4], 'wAC': [1], 'oC': [1, 2, 3, 4, 5], 'wOC': [2, 3]}
-    prev2node = 0
+    
     for x1 in variables['x1']:
         # for x2 in variables['x2']:    
         for w1 in variables['w1']:                          
@@ -56,6 +56,10 @@ def return_data(train_id, test_id, use_paraphraser=False):
                                     train_id += 1
                                     count += 1
     print("neuralnetwork_ii.py: ", count)
-    return train_data, test_data, test_answers
+    if prev2node == 0:
+        train_data2, test_data2, test_answers2 = return_data(0, 0, use_paraphraser, 1)
+        return train_data+train_data2, test_data+test_data2, test_answers+test_answers2
+    else:
+        return train_data, test_data, test_answers
 
-# print(return_data(0, 0))
+print(len(return_data(0, 0)[0]))

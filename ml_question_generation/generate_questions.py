@@ -51,12 +51,10 @@ def generate_data(destination):
     train_id = 0
     test_id = 0
     train_data = []
-    test_data = []
-    test_answers = []
     progress = 0
     for mod in tqdm(modules):
         progress += 1
-        train_id, test_id, train_data, test_data, test_answers = get_and_update(mod, train_id, test_id, train_data, test_data, test_answers)
+        train_id, test_id, train_data, _, _ = get_and_update(mod, train_id, test_id, train_data, test_data, test_answers)
         print("Progress:", str(progress) + " / " + str(len(modules)))
 
     random.shuffle(train_data)
