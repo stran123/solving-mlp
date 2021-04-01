@@ -32,7 +32,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                              f"Let an input vector be [ {x} {y} {z} ] . What is its magnitude ?",
                              f"If x = [ {x} {y} {z} ], what is || x || ?",
                              f"Compute the magnitude of [ {x} {y} {z} ] .",
-                             f"Find the Euclidian length of [ {x} {y} {z} ] ."]}[prev2d]
+                             f"Find the Euclidean length of [ {x} {y} {z} ] ."]}[prev2d]
                 for question in questions:
                     if use_paraphraser:
                         paraphrased_questions = paraphraser.paraphrase(question) # up to 10 

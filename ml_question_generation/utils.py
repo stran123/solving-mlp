@@ -9,7 +9,10 @@ def format_num(x):
 
 """Replaces a negative number with 0-num for expressions"""
 def format_exp(x):
-    return  "0-" + str(-1*x) if x<0  else str(x)
+    if x < 0:
+        return "(0-" + str(-1*x) + ")"
+    else:
+        return str(x)
 
 """Formats a list of numbers to be entered with appropriate negative signs"""
 def format_list(lst):

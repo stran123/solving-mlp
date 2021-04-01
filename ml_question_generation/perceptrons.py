@@ -22,7 +22,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
             formula = formula.format(theta0 = format_exp(theta0), theta1 = format_exp(theta1), p0 = format_exp(p0), p1 = format_exp(p1))
             questions = ["How does a classifier with decision boundary theta classify a point p if theta is ( {theta0} {theta1} ) and p is ( {p0} {p1} ) ?",
                          "A classifier has a decision boundary where theta is ( {theta0} {theta1} ) . What value does it classify p , where p is ( {p0} {p1} ) ?",
-                         "If the decision bounary of a classifier is theta , where theta is equal to ( {theta0} {theta1} ) , how does it classify point p , where p is equal to ( {p0} {p1} ) ?",
+                         "If the decision boundary of a classifier is theta , where theta is equal to ( {theta0} {theta1} ) , how does it classify point p , where p is equal to ( {p0} {p1} ) ?",
                          "A point p is classified by a classifier whose decision boundary is theta = ( {theta0} {theta1} ) . How does it classify p , where p is ( {p0} {p1} ) ?",
                          "If theta is the decision boundary for some classifier , how does the classifier classify a point p , where theta is ( {theta0} {theta1} ) and p is ( {p0} {p1} ) ?"]
             for question in questions:
