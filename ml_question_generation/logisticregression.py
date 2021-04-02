@@ -17,7 +17,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
     train_data = []
     test_data = []
     test_answers = []
-    for theta_a, theta_b in [(1, -1), (0, 0), ( 1, 0), (0, 1), (1, -2), (0, -1), (-1, 0), (0, 2), (2, 0), (-2, 1)]:
+    for theta_a, theta_b in [(1, -1), (-2, 1)]:
         for theta_0 in [0.5, 0, 0.25, -1,  6, 6, 18, -3, 3, 2]:
             for x_a, x_b in [(1, -1), (0, 0), (1, 0), (0, -1), (-1, 0)]:
                 answer = (x_a * theta_a + x_b * theta_b) + theta_0
@@ -52,7 +52,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
     for theta in range(5):
         for theta_0 in [1, 2]:
             for x in range(-2, 3):
-                for y in range(-2, 3):
+                for y in [3]:
                     for eta in [0.01, 0.05]:
                         poww = int(random.random()*3+2)
                         answer = eval(f"{theta}-{eta}*{poww}*(({x}*{theta}+{y})^({poww}-1))*{x}")
@@ -82,7 +82,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
 
     for theta in range(5):
         for theta_0 in [1, 2]:
-            for x in range(-2, 3):
+            for x in [2]:
                 for y in range(-2, 3):
                     for eta in [0.01, 0.05]:
                         poww = int(random.random()*3+2)

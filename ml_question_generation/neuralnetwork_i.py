@@ -16,7 +16,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
     train_data = []
     test_data = []
     test_answers = []
-    variables = {'x1': [0, 1, 2, 3, 4], 'w1': [1, 2], 'oA': [0.5], 'wOA': [0, 1, 2, 3, 4], 'wAC': [1], 'oC': [1, 2, 3, 4, 5], 'wOC': [2, 3]}
+    variables = {'x1': [1], 'w1': [1, 2], 'oA': [0.5], 'wOA': [0, 1, 2, 3, 4], 'wAC': [1], 'oC': [1, 2, 3, 4, 5], 'wOC': [2, 3]}
     prev2node = 0
     for x1 in variables['x1']:   
         for w1 in variables['w1']:
@@ -50,7 +50,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                                     train_data.append(train_dict)
                                     train_id += 1
                                     count += 1
-    for x in range(1, 26):
+    for x in range(1, 6):
         x = 10 * x
         for y in range(1, 21):
             y = 10 * y

@@ -17,7 +17,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
     xy_values = sorted([ _ for _ in itertools.product(range(int(2500**0.5)), range(int(2500**0.5)))], key=lambda x: x[0] + x[1], reverse=True)
     for x in range(1, 6):
         for y in range(6, 11):
-            for z in range(0, 20):
+            for z in range(0, 4):
                 if not prev2d:
                     x, y = xy_values.pop()
                 answer = {0: ((x**2)+(y**2))**0.5, 1: ((x**2)+(y**2)+(z**2))**0.5}[prev2d]

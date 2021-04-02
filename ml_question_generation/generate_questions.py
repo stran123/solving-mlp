@@ -18,6 +18,7 @@ import dt_nn as dtnn # week 12
 # import clustering_unused as c # week 13
 
 
+random.seed(0)
 false = False
 true = True
 use_paraphraser = False
@@ -54,10 +55,11 @@ def generate_data(destination):
     progress = 0
     for mod in tqdm(modules):
         progress += 1
-        train_id, test_id, train_data, _, _ = get_and_update(mod, train_id, test_id, train_data, test_data, test_answers)
+        train_id, test_id, train_data, _, _ = get_and_update(mod, train_id, test_id, train_data, [], [])
         print("Progress:", str(progress) + " / " + str(len(modules)))
 
     random.shuffle(train_data)
+    print("TOTAL SIZE:", len(train_data))
     with open("../data/" + destination, 'w') as outfile:
         json.dump(train_data, outfile)
 
