@@ -154,7 +154,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                         a = int(random.random()*5)
                         answer = eval(f"max(0, {x}*{a}+{y}*{b}+{z}*{c})")
                         #make sure there are no spaces in the formula
-                        formula = f"0m({x}*{a}+{y}{b}+{z}{c})"
+                        formula = f"0m({x}*{a}+{y}*{b}+{z}*{c})"
                         questions = [f"Given an image row [ {x} {y} {z} ] and filter [ {a} {b} {c} ] , what is the result from applying the filter to the image row after applying ReLU activation on the filter’s output ?",
                                      f"Using a row of an image [ {x} {y} {z} ] and filter [ {a} {b} {c} ] , calculate the value from applying the filter which has a ReLU on its output .",
                                      f"What is the result from applying a filter [ {a} {b} {c} ] to a row of an image [ {x} {y} {z} ] , where the filter has a ReLU activation on its output ?",
