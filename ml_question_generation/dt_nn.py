@@ -18,8 +18,8 @@ def return_data(train_id, test_id, use_paraphraser=False):
     test_answers = []
     right = True
     for x in range(44, 49):
-        for r in range(23, 33):
-            for lp in range(1, 11):
+        for r in range(23, 28):
+            for lp in range(1, 5):
                 answer = (-lp/(x-r))*math.log(lp/(x-r), 2)+(-(x-r-lp)/(x-r))*math.log((x-r-lp)/(x-r), 2)
                 #make sure there are no spaces in the formula
                 formula = "(0-{lp}/({x}-{r}))*(({lp}/({x}-{r}))l2)+(0-({x}-{r}-{lp})/({x}-{r}))*((({x}-{r}-{lp})/({x}-{r}))l2)" if right else "(0-{lp}/({r}))*(({lp}/({r}))l2)+(0-({r}-{lp})/({r}))*((({r}-{lp})/({r}))l2)"

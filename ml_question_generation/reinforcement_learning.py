@@ -13,7 +13,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
     test_data = []
     test_answers = []
     for q in range(10):
-        for a in range(1, 11):
+        for a in [1, 2]:
             a = a/10
             for t in range(2, 12, 2):
                 answer = q+(a*(t-q))

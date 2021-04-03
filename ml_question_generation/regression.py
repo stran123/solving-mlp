@@ -1,5 +1,6 @@
 from utils import *
 import paraphraser
+import random
 
 """
 Question: If f(theta) is {c1} times theta plus {c2} squared and theta is {theta} what is f(theta) ?
@@ -16,8 +17,8 @@ def return_data(train_id, test_id, use_paraphraser=False):
     train_data = []
     test_data = []
     test_answers = []
-    for theta in [1, 4, 6,  9.4, 3, 15.4, 0.5, 0.23, 0.1, 5]:
-        for c1 in [3, 4, 7, 10, 0.3, 1, 2, 5, 6, 0.5]:
+    for theta in [1, 2]:
+        for c1 in range(1, 11):
             for c2 in [19, 3, 5,  6, 8]:
                 answer = (c1*theta+c2)*(c1*theta+c2)
                 #make sure there are no spaces in the formula
@@ -48,7 +49,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
 
     for theta in range(5):
         for lda in [0.5, 1]:
-            for x1 in range(-2, 3):
+            for x1 in [2]:
                 for y1 in range(-2, 3):
                     for x2 in [1, 2]:
                         y2 = int(random.random()*5+1)
@@ -77,7 +78,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                             train_id += 1
                             count += 1
 
-    for theta in range(10):
+    for theta in [1, 2]:
         for lda in [0.5, 1]:
             for y1 in range(-2, 3):
                 for y2 in range(-2, 3):

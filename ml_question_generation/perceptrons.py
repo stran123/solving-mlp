@@ -20,7 +20,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
     train_data = []
     test_data = []
     test_answers = []
-    for theta in [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [3, 0], [3, 1], [3, 2], [3, 3], [3, 4], [4, 0], [4, 1], [4, 2], [4, 3], [4, 4]]:
+    for theta in [[1, 3], [1, 4], [2, 0], [2, 3], [2, 4]]:
         theta0, theta1 = theta
         for p in [[0, -4], [0, -3], [0, -2], [0, -1], [0, 0], [1, -4], [1, -3], [1, -2], [1, -1], [1, 0], [2, -4], [2, -3], [2, -2], [2, -1], [2, 0], [3, -4], [3, -3], [3, -2], [3, -1], [3, 0]]:
             p0, p1 = p
@@ -51,7 +51,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                 train_id += 1
                 count += 1
 
-    for gamma in range(1, 26):
+    for gamma in range(1, 6):
         for R in range(1, 21):
             answer = (R*gamma)**2
             #make sure there are no spaces in the formula
@@ -78,7 +78,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                 count += 1
 
     for x in range(5):
-        for y in range(5):
+        for y in [1]:
             for z in range(2):
                 for c in range(2):
                     for b in range(5):
@@ -107,7 +107,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                             train_id += 1
                             count += 1
 
-    for x in range(5):
+    for x in [1]:
         for y in range(5):
             for z in range(2):
                 for c in range(2):

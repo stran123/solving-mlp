@@ -17,7 +17,7 @@ def return_data(train_id, test_id, use_paraphraser=False, prev2node = 0):
     train_data = []
     test_data = []
     test_answers = []
-    variables = {'x1': [0, -1, 2, -3, 4], 'w1': [1, 2], 'oA': [0.5], 'wOA': [0, 1, 2, 3, 4], 'wAC': [1], 'oC': [1, 2, 3, 4, 5], 'wOC': [2, 3]}
+    variables = {'x1': [-1], 'w1': [1, 2], 'oA': [0.5], 'wOA': [0, 1, 2, 3, 4], 'wAC': [1], 'oC': [1, 2, 3, 4, 5], 'wOC': [2, 3]}
     
     for x1 in variables['x1']:
         # for x2 in variables['x2']:    

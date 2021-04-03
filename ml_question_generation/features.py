@@ -18,7 +18,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
     test_data = []
     test_answers = []
     for theta in [1, -1]:
-        for theta0 in range(-12, 13, 1):
+        for theta0 in range(-2, 3):
             for label in [1, -1]:
                 for point in range(5):
                     answer = theta*(point-theta0)*label
@@ -48,7 +48,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                         train_id += 1
                         count += 1
 
-    for z in range(-250, 250):
+    for z in range(-50, 50):
         # z = int(random.random()*10000)/10000
         answer = eval(f"1/(1+2.71828**(0-{z}))")
         #make sure there are no spaces in the formula
@@ -75,7 +75,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
             train_id += 1
             count += 1
 
-    for theta in range(5):
+    for theta in [2]:
         for theta_0 in range(4):
             for x in range(-2, 3):
                 for y in range(-2, 3):

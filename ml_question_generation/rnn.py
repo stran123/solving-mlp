@@ -18,7 +18,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
 
     for s0 in [0,1,2,3,1.5]:
         for w in [0, .5, 1, 1.5, .1]:
-            for x in [[0.25, 0.5], [0, 3, 1], [2, 2, 0], [1, 0, 2], [1, 1, 1], [2, 1], [0, 1, 0], [9, 0, 5], [0.3, 3], [0, 1, 2], [3, 3], [0, 2, 0], [2, 2], [2, 0], [0, 0, 0], [9, 5], [2, 0, 1], [0, 0, 1], [3, 2], [1, 1, 0]]:
+            for x in [[0.25, 0.5], [0, 3, 1], [2, 2, 0], [1, 0, 2]]:
                 ans = get_rnn_answer(s0, w, x)
                 expression = get_rnn_expression(s0, w, x)
                 len_x = len(x)

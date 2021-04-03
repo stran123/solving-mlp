@@ -26,7 +26,8 @@ def return_data(train_id, test_id, use_paraphraser=False):
     train_data = []
     test_data = []
     test_answers = []
-    for len_I in range(50, 75):
+    for len_I in range(5, 10):
+        len_I = len_I * 10
         for len_F in range(3, 43, 2):
             answer = len_I-len_F+1
 
@@ -57,7 +58,8 @@ def return_data(train_id, test_id, use_paraphraser=False):
                 count += 1
 
     for m in range(3, 43, 2):
-        for n in range(50, 75):
+        for n in range(5, 10):
+            n = n * 10
             # for y1 in range(-2, 3):
             #     for y2 in range(-2, 3):
             answer = eval(f"({m}-1)/2")
@@ -86,7 +88,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                 count += 1
 
     for len_F in range(3, 23, 2):
-        for len_I in range(50, 75):
+        for len_I in range(50, 55):
             for s in [1, 2]:
             #     for y2 in range(-2, 3):
                 answer = eval(f"({len_I}-{len_F}+1)/{s}")
@@ -114,7 +116,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                     train_id += 1
                     count += 1
 
-    for x in range(5):
+    for x in [1]:
         for y in range(5):
             for z in range(2):
                 for c in range(2):
@@ -145,14 +147,14 @@ def return_data(train_id, test_id, use_paraphraser=False):
                             count += 1
 
     for x in range(5):
-        for y in range(5):
+        for y in [3]:
             for z in range(2):
                 for c in range(2):
                     for b in range(5):
                         a = int(random.random()*5)
                         answer = eval(f"max(0, {x}*{a}+{y}*{b}+{z}*{c})")
                         #make sure there are no spaces in the formula
-                        formula = f"0m({x}*{a}+{y}{b}+{z}{c})"
+                        formula = f"0m({x}*{a}+{y}*{b}+{z}*{c})"
                         questions = [f"Given an image row [ {x} {y} {z} ] and filter [ {a} {b} {c} ] , what is the result from applying the filter to the image row after applying ReLU activation on the filter’s output ?",
                                      f"Using a row of an image [ {x} {y} {z} ] and filter [ {a} {b} {c} ] , calculate the value from applying the filter which has a ReLU on its output .",
                                      f"What is the result from applying a filter [ {a} {b} {c} ] to a row of an image [ {x} {y} {z} ] , where the filter has a ReLU activation on its output ?",
@@ -174,7 +176,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                             train_id += 1
                             count += 1
 
-    for x in range(10, 110, 2):
+    for x in range(10, 30, 2):
         for f in range(1, 6):
             for s in [1, 2]:
                 answer = eval(f"{x}/{s}")

@@ -20,7 +20,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
     train_data = []
     test_data = []
     test_answers = []
-    for _ in range(100):
+    for _ in range(20):
         for c in range(5):
             seq_len = int(random.random()*4)+3
             x = [int(random.random()*20) for _ in range(seq_len)]
