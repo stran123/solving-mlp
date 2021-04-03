@@ -55,7 +55,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
         for R in range(1, 21):
             answer = (R*gamma)**2
             #make sure there are no spaces in the formula
-            formula = f"({R}*{gamma})**2"
+            formula = f"({R}*{gamma})^2"
             questions = [f"If the margin of the dataset with respect to a separator is {gamma} and the maximum magnitude of a point is {R} , what is the worst-case theoretical bound for the number of mistakes the perceptron algorithm would make ?",
                          f"Let {gamma} be the margin of the dataset with respect to the separator . Also let {R} be the maximum magnitude of a point from the dataset . Compute the maximum number of mistakes made by the perceptron algorithm .",
                          f"Calculate the maximum number of possible mistakes made by the perceptron algorithm if the margin of the separator is {gamma} and the maximum magnitude of a point is {R} .",
