@@ -1,12 +1,5 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-import json
-# import pydot
-# from networkx.drawing.nx_pydot import *
-
-# import os
-# os.environ["PATH"] += os.pathsep + 'C:/Program Files/Graphviz/bin/'
-
 
 OPS = ['+', '-', '*', '/', '^', 'l', 'm']
 
@@ -75,7 +68,7 @@ def build_tree(tokens, key):
 
             
 
-def construct_graphic(tokens, name):
+def construct_graphic(tokens, filename):
     
     key = 0
     graph = nx.Graph()
@@ -88,17 +81,14 @@ def construct_graphic(tokens, name):
     
     sorted_list = sorted(inv_pos.keys())
     sorted_keys = [inv_pos[x] for x in sorted_list]
-
     pos = {key: (i, pos[key][1]) for i, key in enumerate(sorted_keys)}
 
     root.move_nodes(pos)
-
-    # pos = pydot_layout(graph, prog="dot")
     
     root.build_nx(graph)
     print(graph.nodes)
 
     token_dict = nx.get_node_attributes(graph, 'token')
     nx.draw(graph, pos, labels=token_dict, arrows=False)
-    plt.savefig(name)
+    plt.savefig(filename)
     plt.close()
