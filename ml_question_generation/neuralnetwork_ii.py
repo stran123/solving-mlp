@@ -8,6 +8,8 @@ Question: A neural network has input x1 with weight w1 that goes into neuron A. 
           What is the output of neuron C if x1 is {x1}, w1 is {w1}, oA is {oA}, wOA is {wOA}, wAC is {wAC}, oC is {oC}, and wOC is {wOC}?
 Expression: 0m(wAC*((x1*w1)+(oA*wOA))+(oC*wOC))
 
+Question: A neural network has inputs x1 = {x1} with weight {w1} and x2 = {wOA} with weight 1 and offset value oA = {oA} . Neuron B inputs x2 with offset 1 . Neuron C takes in the output of neurons A and B with offsets wAC = {wAC} and wBC = {wOC} , respectively . Neuron C has offset value oC = {oC} and applies an ReLU on its output . Compute the output .
+
 Returns a train_data, test_data, and test_answers
 Each is a list that contains dictionaries in the associated formats"""
 def return_data(train_id, test_id, use_paraphraser=False, prev2node = 0):
