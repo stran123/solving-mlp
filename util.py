@@ -26,8 +26,8 @@ def tokenize_and_separate_quants(data, n_min_vocab):
         nP = np.array(nP)
 
         n_max_nP = max(len(nP), n_max_nP)
-        if idx < 10:
-            print(d)
+#         if idx < 10:
+#             print(d)
         expression = d['expression'] # Ground truth expression
         # Find all quantities in the expression
         out_ops = pattern.split(expression)

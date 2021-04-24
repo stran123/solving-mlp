@@ -186,7 +186,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                              f"What is the total number of outputs for a zero-padded max pooling layer that has {x} inputs , a stride of {s} , and a pooling filter size of {f} ?",
                              f"Given that there are {x} inputs to a zero-padded max pooling layer and a stride length of {s} , compute the number of output units if we also know the pooling filter size of {f} ?",
                              f"A max pooling layer has {x} inputs, a pooling filter length of {f} , a stride length of {s} , and is zero-padded . Compute the number of output units for this layer .",
-                             f"If we know the stride length of a max pooling layer , along with the filter length of {f} and input length of {x} , what is the number of outputs of this layer ?"]
+                             f"If we know the stride {s} of a max pooling layer , along with the filter length of {f} and input length of {x} , what is the number of outputs of this layer ?"]
                 for question in questions:
                     if use_paraphraser:
                         paraphrased_questions = paraphraser.paraphrase(question) # up to 10 

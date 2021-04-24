@@ -9,8 +9,8 @@ Expression: (({x_a}*{theta_a})+({x_b}*{theta_b}))+{theta_0}
 Question: Let a function f(theta) = ( {x} * theta + {y} ) ^ {pow} . For theta = {theta} and eta = {eta} , calculate theta after one gradient descent step .
 Expression: {theta}-{eta}*{pow}*(({x}*{theta}+{y})^({pow}-1))*{x}
 
-Question: Let a function f(theta) = ( {x} * theta + {y} ) ^ 2 . For theta = {theta} and eta = {eta} , calculate f(theta) after one gradient descent update .
-Expression: 
+Question: Let a function f(theta) = ( {x} * theta + {y} ) ^ {pow} . For theta = {theta} and eta = {eta} , calculate f(theta) after one gradient descent update .
+Expression: ({x}*({theta}-{eta}*{pow}*(({x}*{theta}+{y})^({pow}-1))*{x})+{y})^{pow}
 """
 def return_data(train_id, test_id, use_paraphraser=False):
     count = 0
