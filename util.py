@@ -223,7 +223,14 @@ def check_match(pred, d):
         pred = sub_nP(d['pred_tokens'], nP)
         ref = sub_nP(d['out_tokens'], nP)
         match_expression = pred == ref
-    return match_expression or abs(evaluate_prefix_expression(pred) - evaluate_prefix_expression(ref)) < 1e-4, match_expression
+    return evaluate_prefix_expression(pred) == evaluate_prefix_expression(ref), match_expression
+#     return match_expression or abs(evaluate_prefix_expression(pred) - evaluate_prefix_expression(ref)) < 1e-4, match_expression
 
 def sub_nP(tokens, nP):
     return [nP[t[0]] if isinstance(t, tuple) else t for t in tokens]
+
+delete_chars = {',', '.', ' ', 'negative', '-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
+def cleaner(q):
+    for char in delete_chars:
+        q = q.replace(char, '')
+    return q

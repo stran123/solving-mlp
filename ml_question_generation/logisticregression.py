@@ -55,7 +55,7 @@ def return_data(train_id, test_id, use_paraphraser=False):
                 for y in [3]:
                     for eta in [0.01, 0.05]:
                         poww = int(random.random()*3+2)
-                        answer = eval(f"{theta}-{eta}*{poww}*(({x}*{theta}+{y})^({poww}-1))*{x}")
+                        answer = eval(f"{theta}-{eta}*{poww}*(({x}*{theta}+{y})**({poww}-1))*{x}")
                         #make sure there are no spaces in the formula
                         formula = "{theta}-{eta}*{poww}*(({x}*{theta}+{y})^({poww}-1))*{x}".format(theta = format_exp(theta), theta_0 = format_exp(theta_0), x = format_exp(x), y = format_exp(y), poww = poww, eta = eta)
                         questions = ["Let a function f(theta) = ( {x} * theta + {y} ) ^ {poww} . For theta = {theta} and eta = {eta} , calculate theta after one gradient descent step .",

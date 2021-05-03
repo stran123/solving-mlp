@@ -1,5 +1,5 @@
 __pycache__/
-.ipynb_checkpoints
+.ipynb_checkpoints/
 pkafle/vit-pytorch/examples/data/
 .DS_Store
 models/.DS_Store

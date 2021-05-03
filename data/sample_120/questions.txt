@@ -1,0 +1,120 @@
+Let an input vector be [ 5 1 1 ] . What is its magnitude ?
+If x = [ 4 4 ] , what is || x || ?
+Find the Euclidean length of [ 1 4 3 ] .
+What is the magnitude of the vector [ 0 8 1 ] ?
+Compute the magnitude of [ 6 2 ] .
+Find the Euclidian length of [ 5 3 ] .
+Let an input vector be [ 3 1 3 ] . What is its magnitude ?
+If x = [ 1 0 3 ], what is || x || ?
+Find the Euclidean length of [ 4 4 1 ] .
+What is the magnitude of the vector [ 1 5 ] ?
+Calculate the maximum number of possible mistakes made by the perceptron algorithm if the margin of the separator is 4 and the maximum magnitude of a point is 8 .
+Consider the classifier [ 1 3 0 ] and [ 2 3 1 ] . Do they represent the same classifier ? Return 1 if true and another value if false .
+A classifier has a decision boundary where theta is ( 1 3 ) . What value does it classify p , where p is ( 0 negative 1 ) ?
+What is the most number of mistakes made by the perceptron algorithm if 16 is the maximum magnitude of a point in the dataset and the dataset has a margin of 5 to the separator .
+Determine if the following two classifiers represent the same hyperplane , [ 1 1 1 ] and [ 1 2 1 ] . If so , return 1 , and return anything else otherwise .
+Given the classifiers [ 1 3 1 ] and [ 1 4 0 ] , determine if they are the same classifier . Return 1 if so and anything else if not .
+A point p is classified by a classifier whose decision boundary is theta = ( 2 3 ) . How does it classify p , where p is ( 3 0 ) ?
+If the decision boundary of a classifier is theta , where theta is equal to ( 2 3 ) , how does it classify point p , where p is equal to ( 3 negative 2 ) ?
+If the margin of the dataset with respect to a separator is 5 and the maximum magnitude of a point is 16 , what is the worst-case theoretical bound for the number of mistakes the perceptron algorithm would make ?
+Consider the classifier [ 3 1 1 ] and [ 0 1 0 ] . Do they represent the same hyperplane ? Return 1 if true and another value if false .
+Given the values for theta as 2 and theta_0 as 1 , compute the NLL loss on the data point ( 2 2 ) . Use log base e of 2.71828 for the log .
+What is the result of applying the value negative 2 to the sigmoid function ? Let e be equal to 2.71828 .
+What is the size of the margin of a point 1 by a classifier with theta 1 and theta_0 negative 2 if the point has label negative 1 ?
+Assume e is equal to 2.71828 . What do you get from passing the value 8 into the sigmoid function ?
+What is the loss for the data point ( 0 1 ) if we use NLL . Let theta be 2 and theta_0 be 3 . Also use natural log where the base is 2.71828 .
+What is the NLL loss for the single data point ( 2 0 ) where theta is 2 and theta_0 is 2 ? Let the log be natural log ( base is 2.71828 ) .
+What is the margin on a point 2 with a label negative 1 if it is classified by a classifier with theta 1 and theta_0 negative 1 ?
+What does the sigmoid function return when  you pass into it 24 ? Hint: have e be 2.71828 .
+Compute the loss from the datapoint ( 2 1 ) using NLL and natural log , where the base is 2.71828 . Have theta be 2 and theta_0 be 1 .
+Consider the point ( 0 2 ) , the theta 2 and the theta_0 3 . What is the NLL loss ? Use natural log , where the base is 2.71828 .
+Calculate the value of the function ( 2 * theta + negative 2 ) ^ 4 after updating the theta value in one step of gradient descent . Have theta be 4 and eta be 0.01 .
+Let theta be ( negative 2 1 ) , theta_0 be 0.25, and x be ( 0 , negative 1 ) . Compute theta times x plus theta_0 .
+Calculate the updated theta after one gradient descent step if theta is 3 , eta is 0.05 , and the loss function is ( 1 * theta + 3 ) ^ 2 .
+The function ( 2 * theta + negative 1 ) ^ 4 is the loss function when performing a gradient descent. Calculate the loss after one step of gradient descent. Let theta be 2 and eta be 0.01 .
+If you let theta be 2 and eta be 0.01 , what is the updated theta value after one gradient descent step if the loss function is given by ( negative 1 * theta + 3 ) ^ 2 ?
+Let a function f(theta) = ( 0 * theta + 3 ) ^ 4 . For theta = 3 and eta = 0.05 , calculate theta after one gradient descent step .
+Let a function f(theta) = ( 2 * theta + negative 1 ) ^ 3 . For theta = 1 and eta = 0.05 , calculate f(theta) after one gradient descent update .
+What is the result of theta times x plus theta_0 if x is ( 1 negative 1 ), theta is ( 1 negative 1 ) , and theta_0 is 6 ?
+Given a function ( 2 * theta + 0 ) ^ 3 , calculate the value of the function after one gradient descent update if theta is 0 and eta is 0.05 .
+Given a function ( 0 * theta + 3 ) ^ 3 , compute theta after one gradient descent step if theta is 2 and eta is 0.01 .
+Calculate the value of y in the dataset [ ( 0 0 ) , ( 1 2 ) , ( 2 y ) ] if we know that the optimal theta 2 used mean squared error . Let lambda be 1 .
+If f(theta) is 9 times theta plus 8 squared , what is f(theta) when theta is 1 ?
+f(theta) is the square of the sum of 8 and the product of 5 and theta , where theta is 1 . What is f(theta) ?
+Compute the mean squared error with the data points  [ ( 2 negative 1 )  and ( 2 4 ) ] , theta = 0 , and lda = 1 .
+With lambda = 0.5 , the optimal theta is 1 . If the datapoints are [ ( 0 1 ) , ( 1 negative 2 ) , ( 2 y ) ] , what is the value of y ? The optimal theta is computed by mean squared error .
+f(theta) is defined as 9 times theta plus 19 squared and theta is 1 . What is f(theta) ?
+If we let theta be 0 and lda be 1 , what is the mean squared error of the given points  [ ( 2 1 )  and ( 1 5 ) ] ?
+Given the dataset [ ( 0 0 ) , ( 1 negative 2 ) , ( 2 y ) ] , we get that the mean squared error for a theta = 2 is minimal . What does y need to be if lambda is 0.5 ?
+Let 1 be the optimal theta by mean squared error. Given the datapoints [ ( 0 negative 2 ) , ( 1 1 ) , ( 2 y ) ] and lambda is 0.5 , compute the value of y .
+Given theta = 3 and lda = 1 , compute the mean squared error with the data points [ ( 2 negative 2 )  and ( 1 5 ) ] .
+A neural network has inputs x1 = 1 with weight 2 and x2 = 4 with weight 1 and offset value oA = 0.5 . Neuron B inputs x2 with offset 1 . Neuron C takes in the output of neurons A and B with offsets wAC = 1 and wBC = 3 , respectively . Neuron C has offset value oC = 5 . Compute the output .
+In a fully-connected feedforward network , how many weights ( including biases ) are there for one layer with 40 inputs and 70 outputs ?
+In a neural network where it is fully-connected and feedforward , how many total weights are there if we include the biases ? We have 10 inputs and 200 outputs .
+Given a feedforward neural network layer , compute the total number of weights including biases if we have 150 outputs and 40 inputs .
+If we have a neural network layer with 30 inputs and 50 outputs , how many weights ( including biases ) are needed to describe each connection ?
+Neuron A and Neuron C are the input and output neurons of a neural network . Neuron A takes in value x1 is 1 with weight w1 being 1 and offset value oA being 0.5 with weight wOA being 1 . Neuron C takes in the output of neuron A with weight wAC being 1 and offset value oC being 4 with weight wOC being 2 . What is the output of neuron C ?
+Neuron A takes in value 1 with weight 1 and offset 0.5 . Its output is passed into neuron C with weight 1 . Neuron B takes in value 0 with weight 1 and offset 1 . Its output is passed into neuron C with weight 3. Neuron C has offset 1 . Compute the output of this neural network .
+Neurons A and B take inputs 1 and 1 with weights 2 and 1 , respectively . Neuron A has offset 0.5 and neuron B has offset 1 . Neuron C takes in the output of A and B with weights 1 and 3 , respectively , and with offset 2 . What is the output ?
+A fully-connected neural network has 120 outputs and 20 inputs . How many total weights are there including the biases ?
+Compute the output of neuron C , which takes in outputs from neurons A with weight wAC = 1 and B with weight wBC = 3 and offset oC = 5 . Neuron A takes in value x1 = 1 with weight w1 = 2 and offset value oA = 0.5 . Neuron B takes in input x2 = 2 with an offset of 1 .
+In a neural network , neuron A outputs the sum of x1 times w1 and oA times wOA and neuron C outputs the ReLU of the sum of the product between the input from neuron A and wAC and the product between oC and wOC . What is the output of neuron C if we are given that x1 is negative 1 , w1 is 1 , oA is 0.5 , wOA is 2 , wAC is 1 , oC is 4 , and wOC is 2 ?
+Neuron A takes in value negative 1 with weight 2 and offset 0.5 . Its output is passed into neuron C with weight 1 . Neuron B takes in value 1 with weight 1 and offset 1 . Its output is passed into neuron C with weight 2. Neuron C has offset 5 and a ReLU on its output . Compute the output of this neural network .
+A neural network has input x1 with weight w1 that goes into neuron A . Neuron A also has input oA that has weight wOA . Neuron C inputs the output of neuron A with weight wAC . Neuron C has also has input oC that has weight wOC . Neuron C applies a ReLU on its output . What is the output of neuron C if x1 is negative 1 , w1 is 2 , oA is 0.5 , wOA is 0 , wAC is 1 , oC is 5 , and wOC is 3 ?
+Neuron A takes in an offset value oA being 0.5 , an offset weight wOA being 2 , and an input x1 being negative 1 with weight w1 being 2 . The output of neuron A is passed to neuron C , which takes it in with weight wAC being 1 . Neuron C also takes in offset value oC being 5 and offset weight wOC being 2 and applies a ReLU function. Find the output of the neural network .
+Neuron C is the output neuron which applies a ReLU on its output and neuron A is the input neuron to a neural network . Compute the output of a neural network with the given architecture and inputs . Neuron C takes in the offset value oC being 2 with weight wOC being 2 . Neuron C takes in the output of neuron A with weight wAC being 1 . Neuron A takes in the input value x1 being negative 1 with weight w1 being 2 and offset value oA being 0.5 and offset weight wOA being 2 .
+A neural network has inputs x1 = negative 1 with weight 1 and x2 = 3 with weight 1 and offset value oA = 0.5 . Neuron B inputs x2 with offset 1 . Neuron C takes in the output of neurons A and B with offsets wAC = 1 and wBC = 2 , respectively . Neuron C has offset value oC = 1 and applies an ReLU on its output . Compute the output .
+Neurons A and B take inputs negative 1 and 3 with weights 2 and 1 , respectively . Neuron A has offset 0.5 and neuron B has offset 1 . Neuron C takes in the output of A and B with weights 1 and 3 , respectively , and with offset 2 . Neuron C also applies a ReLU on its output . What is the output ?
+Compute the ReLU output of neuron C which takes the output of neuron A with weight 1 and neuron B with weight 2 and offset 3 . Neuron B has input 0 and offset 1 . Neuron A has input negative 1 and offset 1 with offset 0.5 .
+A ReLU is applied to the output of neuron C , which takes in outputs from neurons A with weight wAC = 1 and B with weight wBC = 2 and offset oC = 3 . Neuron A takes in value x1 = negative 1 with weight w1 = 2 and offset value oA = 0.5 . Neuron B takes in input x2 = 0 with an offset of 1 .
+Neuron A is the input neuron of a neural network . Neuron C is the output neuron of the same neural network and applies a ReLU function on its output . Neuron A takes in value x1 is negative 1 with weight w1 being 1 and offset value oA being 0.5 with weight wOA being 3 . Neuron C takes in the output of neuron A with weight wAC being 1 and offset value oC being 1 with weight wOC being 2 . What is the output ?
+Determine how many pixels of padding we need on the input of size 80 by 80 to ensure our filter 31 by 31 gives an output of the same size .
+Given an image row [ 1 3 0 ] and filter [ 2 2 1 ] , what is the result from applying the filter to the image row after applying ReLU activation on the filter’s output ?
+If we have an image of size 90 by 90 and a filter of size 19 by 19 , how far out on each side should we pad to maintain the same output dimensions ?
+Using a stride length of 1 , what is the output from applying a filter of length 5 to an image of length 51 ?
+Consider a filter [ 1 0 0 ] applied on an image [ 3 3 1 ] . What is the output if the filter has a ReLU activation ?
+Consider an image I of length 53 and filter F of length 17 . What is the length of the output if we have a stride length of 2 ?
+Using the row of an image  [ 1 3 1 ] and a filter [ 2 4 0 ] , calculate the value of applying the filter on top of the image .
+What is the minimum number of padding needed to maintain the same output size if the input image is 90 by 90 and the filter is 19 by 19 ?
+Given an image row [ 1 2 1 ] and filter [ 1 0 1 ] , what is the result from applying the filter to the image row such that they both align ?
+Now consider a zero-padded max pooling layer with 14 inputs , a pooling filter size of 5 and stride of 1 . How many total output units are there for this layer?
+Consider the input x_t = [ 3 4 4 10 16 ] to a state machine with equations s_t = f(s_(t-1), x_t) and y_t = g(s_t) . Compute y_5 if our initial conditions are s_0 is 7 , f(s_(t-1), x_t) = max ( s_(t-1) , x_t ) , and g(s_t) = 4 * s_t .
+If we have a state machine , defined as s_t = f(s_(t-1), x_t) and y_t = g(s_t) , where x_t is the input , what is the output y_5 if we have s_0 being 11 , f(s_(t-1), x_t) = max ( s_(t-1) , x_t ) , g(s_t) = 2 * s_t , and we input [ 4 12 5 3 16 ] ?
+What is the output y_5 of a state machine with equations s_t = f(s_(t-1), x_t) and y_t = g(s_t) , conditions s_0 = 6 , f(s_(t-1), x_t) = max ( s_(t-1) , x_t ) , and g(s_t) = 2 * s_t , and input x_t = [ 14 13 7 18 17 ] ?
+Let a state machine be described with the equations s_t = f(s_(t-1), x_t) and y_t = g(s_t), where x_t is the input. If s_0 is 5 , f(s_(t-1), x_t) = max ( s_(t-1) , x_t ) , and g(s_t) = 0 * s_t , what is the output y_3 after the inputs [ 5 14 5 ] ?
+A state machine is defined by the equations s_t = f(s_(t-1), x_t) and y_t = g(s_t) . Given the conditions s_0 = 9 , f(s_(t-1), x_t) = max ( s_(t-1) , x_t ) , and g(s_t) = 1 * s_t , compute y_4 if the input is x_t = [ 3 12 13 0 ] .
+Consider the input x_t = [ 1 1 7 18 15 13 ] to a state machine with equations s_t = f(s_(t-1), x_t) and y_t = g(s_t) . Compute y_6 if our initial conditions are s_0 is 11 , f(s_(t-1), x_t) = max ( s_(t-1) , x_t ) , and g(s_t) = 4 * s_t .
+If we have a state machine , defined as s_t = f(s_(t-1), x_t) and y_t = g(s_t) , where x_t is the input , what is the output y_6 if we have s_0 being 2 , f(s_(t-1), x_t) = max ( s_(t-1) , x_t ) , g(s_t) = 0 * s_t , and we input [ 8 0 16 3 7 7 ] ?
+What is the output y_5 of a state machine with equations s_t = f(s_(t-1), x_t) and y_t = g(s_t) , conditions s_0 = 15 , f(s_(t-1), x_t) = max ( s_(t-1) , x_t ) , and g(s_t) = 4 * s_t , and input x_t = [ 18 6 12 15 12 ] ?
+Let a state machine be described with the equations s_t = f(s_(t-1), x_t) and y_t = g(s_t), where x_t is the input. If s_0 is 3 , f(s_(t-1), x_t) = max ( s_(t-1) , x_t ) , and g(s_t) = 2 * s_t , what is the output y_6 after the inputs [ 11 9 14 4 5 0 ] ?
+A state machine is defined by the equations s_t = f(s_(t-1), x_t) and y_t = g(s_t) . Given the conditions s_0 = 15 , f(s_(t-1), x_t) = max ( s_(t-1) , x_t ) , and g(s_t) = 4 * s_t , compute y_5 if the input is x_t = [ 18 6 12 15 12 ] .
+After applying Q learning to q = 6 , what is its value ? Let the t be 8 and a be 0.2 .
+What is the updated Q value of a tuple ( s a ) if q is 0 , the a is 0.2 , and t is 2 ?
+If a is 0.2 and t is 4 , what is the Q learning value after applying one tuple ( s a ) if q is 5 ?
+Let q = 2 . After Q learning, what is q if a is 0.1 and t is 2 ?
+If q is 0 , what is its updated value after applying Q learning if a is 0.1 and t is 8 ?
+After applying Q learning to q = 4 , what is its value ? Let the t be 8 and a be 0.1 .
+What is the updated Q value of a tuple ( s a ) if q is 3 , the a is 0.2 , and t is 6 ?
+If a is 0.2 and t is 6 , what is the Q learning value after applying one tuple ( s a ) if q is 2 ?
+Let q = 0 . After Q learning, what is q if a is 0.1 and t is 10 ?
+If q is 3 , what is its updated value after applying Q learning if a is 0.2 and t is 4 ?
+An RNN is defined as s_t = w * s_t-1 + x_t. If s_0 is 1 , w is 0 , and x is [ 0.25 0.5 ] , what is s_2 ?
+What is the RNN result s_3 if s_0 is 3 , w is 1 , and x is [ 0 3 1 ] if we let s_t = w * s_t-1 + x_t ?
+Consider a very simple RNN , defined by the following equation: s_t = w * s_ t-1 + x_t. Given s_0 = 1 , w = 0.1 , and x = [ 0 3 1 ] , what is s_3 ?
+We define an RNN as s_t = w * s_t-1 + x_t . What is s_3 if s_0 is 1.5 , w is 1.5 , and x is [ 1 0 2 ] ?
+Let s_0 be 1.5 , w be 1 , and x be [ 1 0 2 ] . Compute s_3 if s_t is w * s_t-1 + x_t .
+An RNN is defined as s_t = w * s_t-1 + x_t. If s_0 is 1.5 , w is 0.1 , and x is [ 0 3 1 ] , what is s_3 ?
+What is the RNN result s_3 if s_0 is 3 , w is 1 , and x is [ 1 0 2 ] if we let s_t = w * s_t-1 + x_t ?
+Consider a very simple RNN , defined by the following equation: s_t = w * s_ t-1 + x_t. Given s_0 = 2 , w = 1 , and x = [ 2 2 0 ] , what is s_3 ?
+We define an RNN as s_t = w * s_t-1 + x_t . What is s_3 if s_0 is 1.5 , w is 0.1 , and x is [ 2 2 0 ] ?
+Let s_0 be 0 , w be 1 , and x be [ 2 2 0 ] . Compute s_3 if s_t is w * s_t-1 + x_t .
+The left side of a region has 24 points . Of the 24 points , 2 are classified as positive . What is the entropy of the left region if there are 48 points in total ?
+Given 44 points on a plane , 25 of them are on the right side of a line , and 3 of them that are on the left side are positive . Compute the entropy of the left side .
+If there are 45 points on a 2D plane , 24 of them on the right side split by a line , and 3 points on the left side that are positive , what is the entropy of the left region ?
+A left region has 4 points classified as positive. There are 44 points in the plane , and 24 points on the left . Compute the entropy .
+There are 46 points on a 2D plane , 26 on the right side of a line and the rest on the left . 3 points on the left of the line are positive . What is the entropy of the left region ?
+Consider a plane of 48 points , 25 of which are on the left side . Of the points on the left , 4 points are positive . Find the entropy of the left side .
+What is the entropy of the left side of a region containing 25 points where the plane has 45 points in total and 2 points on the left are positive ?
+Consider a 1D classification line on a 2D plane . There is a total of 44 points, 24 of which are on the right and the rest on the left of the boundary . 1 points on the left are classified positive . What is the entropy of the left region ?
+If a region has 26 points on the left and 48 points total . 2 points that are on the left are positive. Compute the entropy .
+Calculate the entropy of the left region of a 2D plane, split by a line . There are 1 points on the left side that are positive , 25 points on the right side , and 44 points total .
