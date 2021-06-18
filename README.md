@@ -6,7 +6,7 @@ Contains the code for training the model. This trains on the data located in `/d
 
 ## /data
 
-Contains the data for training the model. Each `.json` file is split for testing (i.e. only a single `.json` file titled `train.json` is needed for both training and testing) under each subdirectory of `/data`.
+Contains the data for training the model. Each `.json` file is split for testing (i.e. only a single `.json` file titled `train-cleaned.json` is needed for both training and testing) under each subdirectory of `/data`.
 
 ## /models
 
