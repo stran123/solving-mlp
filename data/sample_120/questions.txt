@@ -108,13 +108,13 @@ What is the RNN result s_3 if s_0 is 3 , w is 1 , and x is [ 1 0 2 ] if we let s
 Consider a very simple RNN , defined by the following equation: s_t = w * s_ t-1 + x_t. Given s_0 = 2 , w = 1 , and x = [ 2 2 0 ] , what is s_3 ?
 We define an RNN as s_t = w * s_t-1 + x_t . What is s_3 if s_0 is 1.5 , w is 0.1 , and x is [ 2 2 0 ] ?
 Let s_0 be 0 , w be 1 , and x be [ 2 2 0 ] . Compute s_3 if s_t is w * s_t-1 + x_t .
-The left side of a region has 24 points . Of the 24 points , 2 are classified as positive . What is the entropy of the left region if there are 48 points in total ?
-Given 44 points on a plane , 25 of them are on the right side of a line , and 3 of them that are on the left side are positive . Compute the entropy of the left side .
+Calculate the entropy of the left region of a 2D plane, split by a line . There are 1 points on the left side that are positive , 23 points on the right side , and 48 points total .
+Consider a plane of 47 points , 26 of which are on the left side . Of the points on the left , 2 points are positive . Find the entropy of the left side .
+Given 48 points on a plane , 23 of them are on the right side of a line , and 3 of them that are on the left side are positive . Compute the entropy of the left side .
+If a region has 27 points on the left and 47 points total . 4 points that are on the left are positive. Compute the entropy .
+Consider a plane of 45 points , 27 of which are on the left side . Of the points on the left , 4 points are positive . Find the entropy of the left side .
+A left region has 4 points classified as positive. There are 45 points in the plane , and 27 points on the left . Compute the entropy .
 If there are 45 points on a 2D plane , 24 of them on the right side split by a line , and 3 points on the left side that are positive , what is the entropy of the left region ?
-A left region has 4 points classified as positive. There are 44 points in the plane , and 24 points on the left . Compute the entropy .
-There are 46 points on a 2D plane , 26 on the right side of a line and the rest on the left . 3 points on the left of the line are positive . What is the entropy of the left region ?
-Consider a plane of 48 points , 25 of which are on the left side . Of the points on the left , 4 points are positive . Find the entropy of the left side .
-What is the entropy of the left side of a region containing 25 points where the plane has 45 points in total and 2 points on the left are positive ?
-Consider a 1D classification line on a 2D plane . There is a total of 44 points, 24 of which are on the right and the rest on the left of the boundary . 1 points on the left are classified positive . What is the entropy of the left region ?
-If a region has 26 points on the left and 48 points total . 2 points that are on the left are positive. Compute the entropy .
-Calculate the entropy of the left region of a 2D plane, split by a line . There are 1 points on the left side that are positive , 25 points on the right side , and 44 points total .
+What is the entropy of the left side of a region containing 26 points where the plane has 46 points in total and 4 points on the left are positive ?
+Consider a 1D classification line on a 2D plane . There is a total of 48 points, 23 of which are on the right and the rest on the left of the boundary . 3 points on the left are classified positive . What is the entropy of the left region ?
+There are 46 points on a 2D plane , 24 on the right side of a line and the rest on the left . 1 points on the left of the line are positive . What is the entropy of the left region ?
