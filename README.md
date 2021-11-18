@@ -1,6 +1,17 @@
 # Solving Machine Learning Problems
 
-https://stran123.github.io/solving-mlp/
+_Sunny Tran, Pranav Krishna, Ishan Pakuwal, Prabhakar Kafle, Nikhil Singh, Jayson Lynch, and Iddo Drori_
+
+[Project Page](https://stran123.github.io/solving-mlp/)
+
+Repository containing the code and dataset for Solving Machine Learning Problems [[arXiv]](https://arxiv.org/abs/2107.01238), presented at ACML 2021. Our work presents a dataset curated from MIT's Introduction to Machine Learning course (6.036) and trains a machine learning model to learn machine learning concepts from the course.
+
+## Requirements
+
+- transformers
+- dgl
+- torchvision
+- sentencepiece==0.1.91
 
 ## Code Navigation
 
@@ -17,7 +28,7 @@ Contains the data for training the model. `question-to-topic-cleaned.json` conta
 
 ### ml_model_trainer.ipynb
 
-Contains the code for training the model. This trains on the data located in `/data/train-cleaned.json`. Trained models are saved in `models/`. 
+Contains the code for training the model. This trains on the data located in `/data/train-cleaned.json`. Trained models are saved in `models/`. The process to replicate the results in the paper can be found in this notebook.
 
 
 ## BibTeX
