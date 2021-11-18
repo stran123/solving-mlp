@@ -24,11 +24,17 @@ python ml_question_generation/generate_questions.py
 
 ### data/
 
-Contains the data for training the model. `question-to-topic-cleaned.json` contains a mapping from each question to its topic from the course. 
+Contains the data for training the model. 
+
+`train-cleaned.json`: contains the dataset in `.json` format.
+
+`question-to-topic-cleaned.json` contains a mapping from each question to its topic from the course. 
 
 ### ml_model_trainer.ipynb
 
-Contains the code for training the model. This trains on the data located in `/data/train-cleaned.json`. Trained models are saved in `models/`. The process to replicate the results in the paper can be found in this notebook.
+Contains the code for training the model. This trains on the data located at `data/train-cleaned.json`. Trained models are saved in `models/`. 
+
+The process to replicate the results in the paper can be found in this notebook.
 
 
 ## BibTeX
