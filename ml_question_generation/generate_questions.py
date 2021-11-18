@@ -70,7 +70,8 @@ def generate_topic_label_dict(destination):
     with open("../data/" + destination, 'w') as outfile:
         json.dump(question_to_topic, outfile)
 
-generate_data("train-cleaned.json")
-generate_topic_label_dict("question-to-topic-cleaned.json")
+if __name__ == "__main__":
+    generate_data("train-cleaned.json")
+    generate_topic_label_dict("question-to-topic-cleaned.json")
 
 
